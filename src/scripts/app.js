@@ -25,6 +25,9 @@ const app = function() {
             location.hash = 'home'
         },
 
+        initialize: function() {
+            Backbone.history.start()
+        }
     })
 
 // setting up MVC
