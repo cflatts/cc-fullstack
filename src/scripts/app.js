@@ -14,10 +14,12 @@ const app = function() {
         },
 
         _handleHome: function() {
+            console.log('handle home')
             ReactDOM.render(<HomeView />, document.querySelector('.container'))
         },
 
         _handleFaves: function() {
+            console.log('handle faves')
             ReactDOM.render(<FavesView />, document.querySelector('.container'))
         },
 
@@ -29,6 +31,7 @@ const app = function() {
             Backbone.history.start()
         }
     })
+    new FavesRouter()
 
 // setting up MVC
 //* create a view for the home page
@@ -50,7 +53,7 @@ const app = function() {
 
 //use a css framework
 }
-const router  = new FavesRouter()
+
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
 // NECESSARY FOR USER FUNCTIONALITY. DO NOT CHANGE.
 export const app_name = init()
