@@ -50,7 +50,7 @@ const app = function() {
 
 //use a css framework
 }
-
+const router  = new FavesRouter()
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
 // NECESSARY FOR USER FUNCTIONALITY. DO NOT CHANGE.
 export const app_name = init()
