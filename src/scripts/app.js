@@ -6,6 +6,27 @@ import init from './init'
 
 const app = function() {
 
+    const FavesRouter = Backbone.Router.extend({
+        routes: {
+            'home': '_handleHome',
+            'faves': '_handleFaves',
+            '*default': '_handleDefault'
+        },
+
+        _handleHome: function() {
+            ReactDOM.render(<HomeView />, document.querySelector('.container'))
+        },
+
+        _handleFaves: function() {
+            ReactDOM.render(<FavesView />, document.querySelector('.container'))
+        },
+
+        _handleDefault: function() {
+            location.hash = 'home'
+        },
+
+    })
+
 // setting up MVC
 //* create a view for the home page
 //* set up a router
